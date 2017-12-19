@@ -1,0 +1,28 @@
+{
+  "name": "angular-nvd3",
+  "authors": [
+    "Hanumantharaju <hanumantharaju.t@searshc.com>"
+  ],
+  "description": "nvd3 export to pdf",
+  "main": "index",
+  "keywords": [
+    "nvd3",
+    "export",
+    "to",
+    "pdf"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-nvd3": "^1.0.9",
+    "jspdf": "^1.3.5",
+    "bower-pdfkit": "^0.7.1"
+  }
+}

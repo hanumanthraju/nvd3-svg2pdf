@@ -1,0 +1,16 @@
+{
+  "name": "nvd3",
+  "version": "1.0.0",
+  "description": "nvd3 export to pdf",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jspdf": "^1.3.5",
+    "pdfkit": "^0.8.3",
+    "svg-to-pdfkit": "^0.1.5"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Nvd3 Chart Export to PDF </title>
+    <link rel="stylesheet" href="./bower_components/nvd3/build/nv.d3.css"/>
+  </head>
+
+  <body ng-app="exportToPdf">
+  	<div ng-controller="AppCtrl"> 
+    	<button ng-click="toggle()">Start / Stop</button>
+	    
+	    <div id="column-1">
+		    <p>duration: 500</p>
+		    <nvd3 id="chart1-svg" options="options" data="data"></nvd3>
+        <button ng-click="createPdf('chart1-svg', 'nvd3-export-to-pdf')">Export to PDF</button>
+		    <p>duration: 0</p>
+		    <nvd3 id="chart2-svg" options="options1" data="data"></nvd3>
+        <button ng-click="createPdf('chart2-svg', 'nvd3-export-to-pdf')">Export to PDF</button>
+	   </div>
+     <div>
+       <nvd3 id="barChart" options="barChartOptions" data="barChartData"></nvd3>
+       <button ng-click="createPdf('barChart', 'barChart-pdf')">Export to PDF</button>
+     </div>
+    </div>
+
+    <!-- intermidate container to save svg code before exporting to pdf-->
+		<div id="hidden-div" style="display: none;"></div>
+
+		<!-- load angular and dependency bower/npm module -->
+		<script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/d3/d3.js" charset="utf-8"></script>
+    <script src="./bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="./bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+
+    <script src="./bower_components/jspdf/dist/jspdf.debug.js"></script>
+    <script src="./scripts/pdfkit.js"></script>
+    <script src="./scripts/blobstream.js"></script>
+    <script src="./scripts/svg-to-pdfkit.js"></script>
+    <script src="./scripts/svg_to_pdf.js"></script>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
